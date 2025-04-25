@@ -1,0 +1,65 @@
+[
+  {
+    "rating": 5,
+    "text": "Lorem ipsum dolor sit amet, consectetur ad-zzz-ing elit. Proin vel urna at metus tempor mattis, or not, whatever.",
+    "name": "X_AE_A-13",
+    "title": "Product Designer, slothUI",
+    "imageSrc": "/assets/testimonials/avatar.png"
+  },
+  {
+    "rating": 4,
+    "text": "Posuere urna nec tincidunt praesent semper feugiat nibh sed. Velit dignissim sodales ut eu.",
+    "name": "Azunyan U. Wu",
+    "title": "CEO, nextlife.ai",
+    "imageSrc": "/assets/testimonials/avatar1.png"
+  },
+  {
+    "rating": 5,
+    "text": "Sit amet est placerat in. Blandit cursus risus at ultrices mi tempus imperdiet. Volutpat commodo sed egestas egestas fringilla phasellus. Tincidunt eget nullam non nisi.",
+    "name": "Mechatronics Yi",
+    "title": "CTO, fin4win.ai",
+    "imageSrc": "/assets/testimonials/avatar2.png"
+  },
+  {
+    "rating": 5,
+    "text": "Nisi porta lorem mollis aliquam ut porttitor leo. Sed odio morbi quis commodo. Arcu non odio euismod lacinia at quis. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.",
+    "name": "Oarack Babama",
+    "title": "Former President of US",
+    "imageSrc": "/assets/testimonials/avatar3.png"
+  },
+  {
+    "rating": 4,
+    "text": "Accumsan tortor posuere ac ut consequat. Quis varius quam quisque id diam vel. Commodo odio aenean sed adipiscing diam donec adipiscing. Vel pharetra vel turpis nunc eget.",
+    "name": "Saylor Twift",
+    "title": "Famous Singer",
+    "imageSrc": "/assets/testimonials/avatar4.png"
+  },
+  {
+    "rating": 3,
+    "text": "Venenatis cras sed felis eget velit aliquet. Velit scelerisque in dictum non consectetur. Felis eget velit aliquet sagittis. Ultricies integer quis auctor elit sed vulputate mi.",
+    "name": "Asuna Yuuki",
+    "title": "Virtual Swordsman",
+    "imageSrc": "/assets/testimonials/avatar5.png"
+  },
+  {
+    "rating": 2,
+    "text": "Sagittis eu volutpat odio facilisis mauris sit amet massa. Urna et pharetra pharetra massa.",
+    "name": "Boe Jiden",
+    "title": "Former President Of Canada",
+    "imageSrc": "/assets/testimonials/avatar6.png"
+  },
+  {
+    "rating": 5,
+    "text": "Cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl. Nec nam aliquam sem et tortor consequat id porta nibh. Viverra suspendisse. Lacus sed viverra tellus in hac habitasse platea dictumst. Elit at imperdiet dui accumsan.",
+    "name": "Vermillion D. Gray",
+    "title": "CEO, hacklife.ai",
+    "imageSrc": "/assets/testimonials/avatar7.png"
+  },
+  {
+    "rating": 4,
+    "text": "Viverra accumsan in nisl nisi scelerisque eu. Vitae congue eu consequat ac felis donec.",
+    "name": "Zuckman Wu",
+    "title": "CEO, tech4life.ai",
+    "imageSrc": "/assets/testimonials/avatar8.png"
+  }
+]

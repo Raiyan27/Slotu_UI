@@ -1,0 +1,26 @@
+[
+  {
+    "country": "Japan",
+    "addressLine1": "221b Banzai Street",
+    "addressLine2": "Tokyo, TO 77812",
+    "iconClass": "/assets/map_pin.png"
+  },
+  {
+    "country": "USA",
+    "addressLine1": "221b Freedom Street",
+    "addressLine2": "New York, NY 21231",
+    "iconClass": "/assets/map_pin.png"
+  },
+  {
+    "country": "Canada",
+    "addressLine1": "221b Maple Syrup Street",
+    "addressLine2": "Ottawa, OW 77847",
+    "iconClass": "/assets/map_pin.png"
+  },
+  {
+    "country": "South Korea",
+    "addressLine1": "221b Samyang Street",
+    "addressLine2": "Gangnam, GM 22124",
+    "iconClass": "/assets/map_pin.png"
+  }
+]
