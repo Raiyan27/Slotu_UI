@@ -1,11 +1,61 @@
+// FEATURES
 document.addEventListener("DOMContentLoaded", () => {
   const featuresContainer = document.getElementById("features-container");
   const jsonFilePath = "/data/features.json";
+
+  // --- This is where you'd initialize your IntersectionObserver ---
+  // --- For this example, I'll create a specific one for features ---
+  let featureObserver = null;
+
+  function initFeatureObserver() {
+    if (featureObserver) {
+      featureObserver.disconnect();
+    }
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const animationName = el.dataset.animation || "fade-in-up";
+          const animationDelay = el.dataset.delay || "0s";
+          const animationDuration = el.dataset.duration;
+
+          const animationClass = `anim-${animationName}`;
+
+          if (animationDelay) {
+            el.style.animationDelay = animationDelay;
+          }
+          if (animationDuration) {
+            el.style.animationDuration = animationDuration;
+          }
+          // Ensure it's hidden before animation starts, if not handled by CSS alone
+          el.style.opacity = "0";
+          requestAnimationFrame(() => {
+            // Ensures opacity update is processed before class addition
+            el.classList.add(animationClass);
+          });
+
+          observer.unobserve(el);
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.1, // Adjust as needed
+    };
+    featureObserver = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+  }
+  // --- End of IntersectionObserver setup for features ---
 
   if (!featuresContainer) {
     console.error("Error: Could not find the '#features-container' element.");
     return;
   }
+
   fetch(jsonFilePath)
     .then((response) => {
       if (!response.ok) {
@@ -18,16 +68,29 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("JSON data is not an array!");
       }
       featuresContainer.innerHTML = "";
-      data.forEach((item) => {
+      initFeatureObserver();
+
+      data.forEach((item, index) => {
         const featureDiv = document.createElement("div");
         featureDiv.classList.add("feature-item");
+        featureDiv.classList.add("animate-on-scroll");
+        featureDiv.dataset.animation = "fade-in-up";
+        featureDiv.dataset.delay = `${index * 0.2}s`;
+
         featureDiv.innerHTML = `
-            <img src="${item.icon}" alt="${item.title}
-            class="feature-item-icon">
+            <img src="${item.icon}" alt="${item.title}" class="feature-item-icon">
             <h3 class="features-item-header">${item.title}</h3>
             <p class="features-item-body">${item.description}</p>
         `;
         featuresContainer.appendChild(featureDiv);
+
+        // **MODIFICATION: Tell the observer to watch this new element**
+        if (featureObserver) {
+          featureObserver.observe(featureDiv);
+        } else if (window.yourGlobalScrollObserver) {
+          // If you have a global one
+          window.yourGlobalScrollObserver.observe(featureDiv);
+        }
       });
     })
     .catch((error) => {

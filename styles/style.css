@@ -109,9 +109,10 @@ section {
 
 #hero {
   background: linear-gradient(
-    to bottom,
+    160deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(89, 81, 245, 0.5) 100%
+    rgba(255, 255, 255, 1) 30%,
+    rgba(65, 55, 243, 0.5) 100%
   );
   display: flex;
   flex-direction: column;
@@ -550,6 +551,7 @@ section {
 /* CTA SECTION */
 #cta {
   background-color: rgba(238, 242, 255, 1);
+  height: 590px;
 }
 
 .container {
@@ -578,7 +580,35 @@ section {
   line-height: 160%;
   max-width: 500px;
 }
+/* IMAGES */
+.image-column {
+  /* Remove flex display from the base style */
+  /* position: relative; is fine here, needed by .large anyway */
+  position: relative;
+}
 
+/* --- Small Screen Styles (<= 1000px) --- */
+
+/* Initially hide the large version and show the small version */
+.image-column.large {
+  display: none;
+}
+.image-column.small {
+  display: flex; /* Use flex ONLY for the small container to center the image */
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; /* Example minimum height */
+}
+
+.image-column.small .cta-image {
+  /* Styles for the single image on small screens */
+  position: static; /* Override any potential absolute positioning */
+  display: block; /* Or inline-block */
+  max-width: 343px;
+  height: auto;
+  width: auto;
+  margin: 0 auto; /* Alternative centering if not using flex */
+}
 /* Button Group */
 .button-group {
   display: flex;
@@ -603,15 +633,6 @@ section {
 .btn-primary {
   background-color: rgba(79, 70, 229, 1);
   color: rgba(255, 255, 255, 1);
-}
-.image-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image-column img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* FOOTER */
