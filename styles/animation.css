@@ -1,0 +1,209 @@
+/* General Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes subtleBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes subtleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(
+      -20px
+    ); /* Adjust this value for more/less float height */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.anim-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.anim-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.anim-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.anim-scale-up {
+  animation: scaleUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Delay classes */
+.delay-200ms {
+  animation-delay: 0.2s;
+}
+.delay-400ms {
+  animation-delay: 0.4s;
+}
+.delay-600ms {
+  animation-delay: 0.6s;
+}
+.delay-800ms {
+  animation-delay: 0.8s;
+}
+
+/* Navbar Animations */
+.navbar_logo_box img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.nav_links li a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav_links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-color, #754ffe); /* Use your primary color */
+  transition: width 0.3s ease-out;
+}
+.nav_links li a:hover::after {
+  width: 100%;
+}
+.navbar_buttons button {
+  transition: transform 0.2s ease-out, background-color 0.2s ease;
+}
+.navbar_buttons button:hover {
+  transform: scale(1.05);
+}
+#sign_up_button:hover {
+  /* Add specific hover style if different */
+}
+#log_in_button:hover {
+  /* Add specific hover style if different */
+}
+
+/* Hero Section Animations */
+#hero .badge {
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+#hero h1 {
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+#hero p {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+#hero .app-btn-container button {
+  opacity: 0; /* Start hidden if applying individual animation */
+  transition: transform 0.3s ease;
+}
+#hero .app-btn-container button:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+#hero .app-btn-container button:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+}
+#hero .app-btn-container button:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 1s forwards;
+}
+#hero > div:last-child img {
+  /* Hero Image */
+  animation: scaleUp 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.testimonial-card .testimonial-card-inner-content {
+  animation-name: subtleFloat;
+  animation-duration: 3s; /* Controls the speed of one full up-and-down cycle */
+  animation-timing-function: ease-in-out; /* Makes the movement smooth */
+  animation-iteration-count: infinite; /* Loop indefinitely */
+  animation-direction: alternate; /* Goes up, then down, then up, etc. */
+}
+.testimonial-container > .testimonial-card:hover {
+  /* Or just .testimonial-card:hover if specific enough */
+  transform: translateY(-5px) scale(1.02); /* Adjust as needed, this is from your previous CSS */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}

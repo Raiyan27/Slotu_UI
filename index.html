@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/font.css" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/responsive.css" />
+    <link rel="stylesheet" href="/styles/animation.css" />
     <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
@@ -27,20 +28,56 @@
   <body class="plus-jakarta-sans">
     <nav id="navbar" class="navbar flex">
       <div class="navbar_logo_box flex">
-        <img class="navbar_logo" src="/assets/logomark.png" alt="" />
+        <img
+          class="navbar_logo"
+          src="/assets/logomark.png"
+          alt="SlothUI Logo"
+        />
+        <!-- Added alt text -->
       </div>
-      <ul class="nav_links">
-        <li>Features</li>
-        <li>Achievements</li>
-        <li>Testimonitals</li>
-        <li>FAQ</li>
+
+      <!-- Desktop Links -->
+      <ul class="nav_links desktop-only">
+        <li><a href="#main-features">Features</a></li>
+        <li><a href="#results">Achievements</a></li>
+        <li><a href="#testimonials">Testimonitals</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
       </ul>
-      <div class="navbar_buttons flex">
+
+      <!-- Desktop Buttons -->
+      <div class="navbar_buttons flex desktop-only">
         <button id="sign_up_button">Sign Up</button>
         <button id="log_in_button">Log In</button>
       </div>
-      <div class="menu-btn">
-        <img src="/assets/menu_btn.png" alt="" />
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="menu-btn mobile-only"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <img src="/assets/menu_btn.png" alt="Menu" />
+        <!-- <img src="/assets/close_btn.png" alt="Close Menu" class="close-icon"> -->
+      </button>
+
+      <!-- Mobile Menu Container -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu-container"
+        aria-labelledby="navbar"
+      >
+        <!-- Initially hidden -->
+        <ul class="nav_links mobile-nav-links">
+          <li><a href="#main-features">Features</a></li>
+          <li><a href="#results">Achievements</a></li>
+          <li><a href="#testimonials">Testimonitals</a></li>
+          <li><a href="#faq-section">FAQ</a></li>
+        </ul>
+        <div class="navbar_buttons mobile-navbar-buttons flex">
+          <button id="mobile_sign_up_button">Sign Up</button>
+          <button id="mobile_log_in_button">Log In</button>
+        </div>
       </div>
     </nav>
     <section id="hero">
@@ -68,17 +105,83 @@
     </section>
     <section id="partners">
       <ul>
-        <li><img src="/assets/partners/companylogo1.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo2.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo3.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo4.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo5.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo6.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo7.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo8.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo9.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo10.png" alt="" /></li>
-        <li><img src="/assets/partners/companylogo11.png" alt="" /></li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.1s"
+        >
+          <img src="/assets/partners/companylogo1.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.2s"
+        >
+          <img src="/assets/partners/companylogo2.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.3s"
+        >
+          <img src="/assets/partners/companylogo3.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.4s"
+        >
+          <img src="/assets/partners/companylogo4.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.5s"
+        >
+          <img src="/assets/partners/companylogo5.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.6s"
+        >
+          <img src="/assets/partners/companylogo6.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.7s"
+        >
+          <img src="/assets/partners/companylogo7.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.8s"
+        >
+          <img src="/assets/partners/companylogo8.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.9s"
+        >
+          <img src="/assets/partners/companylogo9.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="1.0s"
+        >
+          <img src="/assets/partners/companylogo10.png" alt="" />
+        </li>
+        <li
+          class="animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="1.1s"
+        >
+          <img src="/assets/partners/companylogo11.png" alt="" />
+        </li>
       </ul>
     </section>
     <section id="main-features">
@@ -96,28 +199,42 @@
     <section id="results">
       <div class="container-width center-align">
         <div class="icon">
-          <img src="/assets/results/vector.png" alt="" />
+          <img
+            src="/assets/results/vector.png"
+            alt=""
+            class="animate-on-scroll"
+            data-animation="custom-results-icon"
+            data-delay="0.2s"
+          />
         </div>
-        <h1 class="section-heading">
+        <h1
+          class="section-heading animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.3s"
+        >
           Work lazily and achieve the result you want.
         </h1>
-        <p class="section-body">
+        <p
+          class="section-body animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.4s"
+        >
           Liquam id diam maecenas ultricies mi eget mauris pharetra et. Feugiat
           pretium nibh ipsum consequat nisl vel pretium lectus. Fermentum
           iaculis eu non diam.
         </p>
       </div>
       <div id="stat-container" class="container-width">
-        <div class="stats-card">
-          <h1>420%</h1>
+        <div class="stats-card" data-animation="fade-in-up" data-delay="0.5s">
+          <h1 data-target="420" data-suffix="%">0%</h1>
           <h4>Data efficiency</h4>
         </div>
-        <div class="stats-card">
-          <h1>708+</h1>
+        <div class="stats-card" data-animation="fade-in-up" data-delay="0.7s">
+          <h1 data-target="708" data-suffix="+">0+</h1>
           <h4>Conversion Rate</h4>
         </div>
-        <div class="stats-card">
-          <h1>1.82M</h1>
+        <div class="stats-card" data-animation="fade-in-up" data-delay="0.9s">
+          <h1 data-target="1.82" data-suffix="M" data-decimals="2">0.00M</h1>
           <h4>AI LLM Scale</h4>
         </div>
       </div>
@@ -125,35 +242,72 @@
     <section id="who-is-it-for">
       <div class="align-start">
         <h3 class="badge">Who is it for?</h3>
-        <h1 class="section-heading text-start">What the procrastinators say</h1>
-        <p class="section-body text-start">
-          Mi ipsum faucibus vitae aliquet nec. At tempor commodo ullamcorper a
-          lacus. Bibendum at varius vel pharetra vel.
-        </p>
+        <div id="who-is-it-for-text-div">
+          <h1
+            id="who-is-it-for-header"
+            class="section-heading text-start animate-on-scroll"
+            data-animation="fade-in-up"
+            data-delay="0.4s"
+          >
+            What the procrastinators say
+          </h1>
+          <p
+            class="section-body text-start animate-on-scroll"
+            data-animation="fade-in-up"
+            data-delay="0.6s"
+          >
+            Mi ipsum faucibus vitae aliquet nec. At tempor commodo ullamcorper a
+            lacus. Bibendum at varius vel pharetra vel.
+          </p>
+        </div>
       </div>
       <div id="for-who-container">
         <div id="for-who-text-items"></div>
         <div id="for-who-img-div">
-          <img src="/assets/for_who/phone_vector.png" alt="" />
+          <img
+            id="for-who-image"
+            src="/assets/for_who/phone_vector.png"
+            alt=""
+          />
         </div>
       </div>
     </section>
     <section id="testimonials">
       <div class="container-width center-align">
         <h3 class="badge">Testimonitals</h3>
-        <h1 class="section-heading">What People Say</h1>
-        <p class="section-body">
+        <h1
+          class="section-heading animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.2s"
+        >
+          What People Say
+        </h1>
+        <p
+          class="section-body animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.4s"
+        >
           You can visit our office anytime but please don’t stalk us or don’t be
           creepy.
         </p>
       </div>
       <div class="testimonial-container"></div>
     </section>
-    <section id="locations">
+    <section id="locations" class="">
       <div class="align-start">
         <h3 class="badge">Visit Us Anytime</h3>
-        <h1 class="section-heading text-start">Our Office</h1>
-        <p class="section-body text-start">
+        <h1
+          class="section-heading text-start animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.2s"
+        >
+          Our Office
+        </h1>
+        <p
+          class="section-body text-start animate-on-scroll"
+          data-animation="fade-in-up"
+          data-delay="0.4s"
+        >
           You can visit our office anytime but please don't stalk us or don't be
           creepy.
         </p>
@@ -164,8 +318,18 @@
       <div class="section-container">
         <div class="container-width center-align">
           <h3 class="badge">FAQ</h3>
-          <h1 class="section-heading">Frequently Asked Questions</h1>
-          <p class="section-body">
+          <h1
+            class="section-heading animate-on-scroll"
+            data-animation="fade-in-up"
+            data-delay="0.2s"
+          >
+            Frequently Asked Questions
+          </h1>
+          <p
+            class="section-body animate-on-scroll"
+            data-animation="fade-in-up"
+            data-delay="0.4s"
+          >
             Fermentum iaculis eu non diam phasellus vestibulum. Volutpat commodo
             sed egestas egestas fringilla phasellus. Donec ac odio tempor orci
             dapibus ultrices.

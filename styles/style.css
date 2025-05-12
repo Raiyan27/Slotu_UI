@@ -4,11 +4,16 @@
   padding: 0px;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* MISC */
 .flex {
   display: flex;
 }
-
+.border {
+  border: 1px solid black;
+}
 /* Resuable */
 section {
   padding: 96px 112px;
@@ -70,15 +75,20 @@ section {
   justify-content: space-between;
   align-items: center;
 }
-
+.nav_links > li {
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.7%;
+  color: rgba(71, 85, 105, 1);
+}
 .navbar > ul {
   display: flex;
-
   list-style: none;
+  gap: 32px;
 }
-.navbar > ul > li {
-  margin-right: 32px;
-}
+
 .navbar_buttons {
   gap: 8px;
 }
@@ -127,12 +137,14 @@ section {
   line-height: 68px;
   text-align: center;
   color: rgba(30, 41, 59, 1);
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 #hero > div > p {
+  font-weight: 400;
   font-size: 18px;
-  font-weight: 400px;
   line-height: 160%;
+  letter-spacing: 0%;
   text-align: center;
   color: rgba(71, 85, 105, 1);
 }
@@ -156,6 +168,7 @@ section {
 
 /* PARTNERS SECTION */
 #partners {
+  padding: 64px 112px;
   background-color: rgba(248, 250, 252, 1);
 }
 #partners > ul {
@@ -242,11 +255,28 @@ section {
 }
 
 /* WHO IS IT FOR SECTION */
+#for-who-image {
+  opacity: 1; /* Default state: visible */
+  transition: opacity 0.3s ease-in-out; /* Adjust timing as needed */
+}
+
+#for-who-image.image-fade-out {
+  /* Class to make the image transparent */
+  opacity: 0;
+}
+
 #who-is-it-for {
   max-width: 1440px;
   margin: 0 auto;
 }
-
+#who-is-it-for-header {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+#who-is-it-for-text-div {
+  max-width: 680px;
+  margin-bottom: 64px;
+}
 #who-is-it-for > div:first-of-type > p {
   text-align: start !important;
 }
@@ -257,8 +287,8 @@ section {
   align-items: center;
 }
 #for-who-img-div {
-  max-width: 592px;
-  max-height: 592px;
+  width: 592px;
+  height: 592px;
 }
 #for-who-img-div > img {
   width: 100%;
@@ -378,6 +408,10 @@ section {
 }
 
 /* LOCATION SECTION */
+#locations > div:first-of-type {
+  max-width: 1216px;
+  margin: 0 auto;
+}
 #locations-grid {
   display: flex;
   justify-content: space-between;
